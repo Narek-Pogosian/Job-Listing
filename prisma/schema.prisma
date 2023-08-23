@@ -13,7 +13,7 @@ model JobListing {
   city            String
   company         String
   details         String?
-  minimumSalary   Int
+  salary          Int
   jobType         JobType
   experienceLevel ExperienceLevel
   createdAt       DateTime        @default(now())
