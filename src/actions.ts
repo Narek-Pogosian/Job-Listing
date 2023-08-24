@@ -5,7 +5,6 @@ import { JobSchemaType, jobSchema } from "./lib/validations/jobValidation";
 import { revalidatePath } from "next/cache";
 
 /**
- * ! redirect didnt work
  * @param data comes from jobform
  * @returns { success: boolean }
  */

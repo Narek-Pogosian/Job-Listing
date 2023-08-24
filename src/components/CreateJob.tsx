@@ -23,7 +23,7 @@ const CreateJob = () => {
 
   return (
     <JobForm onSubmit={onSubmit}>
-      <Button variant="secondary" asChild>
+      <Button variant="outline" asChild>
         <Link href="/">Cancel</Link>
       </Button>
       <Button>Submit</Button>

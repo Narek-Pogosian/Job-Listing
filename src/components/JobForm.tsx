@@ -37,7 +37,7 @@ const JobForm = ({ initialData, children, onSubmit }: Props) => {
     defaultValues: initialData
       ? {
           ...initialData,
-          details: initialData.details ? initialData.details : undefined,
+          details: initialData.details ? initialData.details : "", // null not allowed
         }
       : {
           title: "",
@@ -46,7 +46,7 @@ const JobForm = ({ initialData, children, onSubmit }: Props) => {
           details: "",
           experienceLevel: undefined,
           jobType: undefined,
-          salary: undefined,
+          salary: 0,
         },
   });
 
