@@ -7,15 +7,15 @@ type Option = {
 
 export const experienceOptions: Array<Option> = [
   {
-    value: "JUNIOR",
+    value: "junior",
     label: "Junior",
   },
   {
-    value: "MID_LEVEL",
+    value: "mid_level",
     label: "Mid Level",
   },
   {
-    value: "SENIOR",
+    value: "senior",
     label: "Senior",
   },
 ];

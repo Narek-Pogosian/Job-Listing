@@ -18,22 +18,31 @@ import {
 import { experienceOptions } from "@/lib/data/experienceOptions";
 import { jobTypeOptions } from "@/lib/data/jobTypeOptions";
 import { Button } from "./ui/button";
+import { useRouter } from "next/navigation";
+import { setSearchQueries } from "@/lib/utils";
+import { SearchParams } from "@/lib/types";
 
-const SearchForm = () => {
+const SearchForm = ({ searchParams }: { searchParams: SearchParams }) => {
+  const router = useRouter();
+
   const form = useForm<SearchSchemaType>({
     resolver: zodResolver(searchSchema),
     defaultValues: {
-      city: "",
-      salary: 0, // control error
-      experienceLevel: "",
-      jobType: "",
+      city: searchParams.city,
+      salary: searchParams.salary ? parseInt(searchParams.salary) : 0,
+      experienceLevel: searchParams.experienceLevel,
+      jobType: searchParams.jobType,
     },
   });
+
+  const onSubmit = (values: SearchSchemaType) => {
+    router.push(setSearchQueries(values));
+  };
 
   return (
     <Form {...form}>
       <form
-        action=""
+        onSubmit={form.handleSubmit(onSubmit)}
         className="grid mb-10 gap-x-6 gap-y-3 md:grid-cols-2 xl:grid-cols-3"
       >
         <FormField

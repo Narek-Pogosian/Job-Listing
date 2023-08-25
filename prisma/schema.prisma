@@ -21,13 +21,13 @@ model JobListing {
 }
 
 enum JobType {
-  FULL_TIME
-  PART_TIME
-  INTERNSHIP
+  full_time
+  part_time
+  internship
 }
 
 enum ExperienceLevel {
-  JUNIOR
-  MID_LEVEL
-  SENIOR
+  junior
+  mid_level
+  senior
 }

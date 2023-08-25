@@ -1,20 +1,20 @@
-import JobCard from "@/components/JobCard";
+import JobList from "@/components/JobList";
 import SearchForm from "@/components/SearchForm";
+import { SearchParams } from "@/lib/types";
+import { Suspense } from "react";
 
-import { db } from "@/lib/db";
-import React from "react";
+export const dynamic = "force-dynamic";
 
-const Page = async () => {
-  const jobs = await db.jobListing.findMany();
-
+const Page = async ({ searchParams }: { searchParams: SearchParams }) => {
   return (
     <>
-      <SearchForm />
-      <div className="grid gap-6 md:grid-cols-2 xl:grid-cols-3">
-        {jobs.map((job) => (
-          <JobCard key={job.id} job={job} />
-        ))}
-      </div>
+      <SearchForm searchParams={searchParams} />
+      <Suspense
+        fallback={<p>Loading...</p>}
+        key={Object.values(searchParams).join()}
+      >
+        <JobList searchParams={searchParams} />
+      </Suspense>
     </>
   );
 };

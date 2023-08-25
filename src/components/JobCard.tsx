@@ -25,7 +25,7 @@ const JobCard = ({ job }: Props) => {
       </CardHeader>
       <CardContent>
         <p className="mb-2">{job.details}</p>
-        <div className="flex gap-2">
+        <div className="flex gap-2 mt-auto">
           <Badge>{job.salary}</Badge>
           <Badge>{convertEnumString(job.jobType)}</Badge>
           <Badge>{convertEnumString(job.experienceLevel)}</Badge>

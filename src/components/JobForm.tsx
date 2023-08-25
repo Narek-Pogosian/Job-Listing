@@ -23,7 +23,7 @@ import {
   SelectTrigger,
   SelectValue,
 } from "./ui/select";
-import { ReactNode } from "react";
+import type { ReactNode } from "react";
 
 type Props = {
   initialData?: JobListing;

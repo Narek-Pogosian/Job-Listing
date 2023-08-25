@@ -7,15 +7,15 @@ type Option = {
 
 export const jobTypeOptions: Array<Option> = [
   {
-    value: "FULL_TIME",
+    value: "full_time",
     label: "Full Time",
   },
   {
-    value: "PART_TIME",
+    value: "part_time",
     label: "Part Time",
   },
   {
-    value: "INTERNSHIP",
+    value: "internship",
     label: "Internship",
   },
 ];

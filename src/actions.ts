@@ -16,12 +16,13 @@ export const createJob = async (
   if (validate.success) {
     try {
       await db.jobListing.create({
-        data: data,
+        data,
       });
       revalidatePath("/");
 
       return { success: true };
     } catch (error) {
+      console.log(error);
       return { success: false };
     }
   }
