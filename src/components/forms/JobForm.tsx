@@ -4,8 +4,8 @@ import { JobSchemaType, jobSchema } from "@/lib/validations/jobValidation";
 import { useForm } from "react-hook-form";
 import { zodResolver } from "@hookform/resolvers/zod";
 import { JobListing } from "@prisma/client";
-import { Input } from "./ui/input";
-import { Textarea } from "./ui/textarea";
+import { Input } from "../ui/input";
+import { Textarea } from "../ui/textarea";
 import { jobTypeOptions } from "@/lib/data/jobTypeOptions";
 import { experienceOptions } from "@/lib/data/experienceOptions";
 import {
@@ -15,14 +15,14 @@ import {
   FormItem,
   FormLabel,
   FormMessage,
-} from "./ui/form";
+} from "../ui/form";
 import {
   Select,
   SelectContent,
   SelectItem,
   SelectTrigger,
   SelectValue,
-} from "./ui/select";
+} from "../ui/select";
 import type { ReactNode } from "react";
 
 type Props = {

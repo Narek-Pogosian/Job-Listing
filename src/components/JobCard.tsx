@@ -7,7 +7,7 @@ import {
   CardTitle,
 } from "@/components/ui/card";
 import { convertEnumString } from "@/lib/utils";
-import Badge from "@/components/Badge";
+import Badge from "@/components/ui/Badge";
 
 type Props = {
   job: JobListing;

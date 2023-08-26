@@ -11,3 +11,11 @@ export const searchSchema = z.object({
 });
 
 export type SearchSchemaType = z.infer<typeof searchSchema>;
+
+export interface SearchParams {
+  city?: string;
+  salary?: string;
+  jobType?: JobType;
+  experienceLevel?: ExperienceLevel;
+  page?: string;
+}

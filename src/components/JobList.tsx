@@ -1,6 +1,6 @@
 import { db } from "@/lib/db";
 import JobCard from "./JobCard";
-import { SearchParams } from "@/lib/types";
+import { SearchParams } from "@/lib/validations/searchValiditions";
 
 const JobList = async ({ searchParams }: { searchParams: SearchParams }) => {
   const jobs = await db.jobListing.findMany({

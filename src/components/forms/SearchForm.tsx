@@ -1,40 +1,39 @@
 "use client";
 
 import {
+  SearchParams,
   SearchSchemaType,
   searchSchema,
 } from "@/lib/validations/searchValiditions";
 import { zodResolver } from "@hookform/resolvers/zod";
 import { useForm } from "react-hook-form";
-import { Form, FormControl, FormField, FormItem, FormLabel } from "./ui/form";
-import { Input } from "./ui/input";
+import { Form, FormControl, FormField, FormItem, FormLabel } from "../ui/form";
+import { Input } from "../ui/input";
 import {
   Select,
   SelectContent,
   SelectItem,
   SelectTrigger,
   SelectValue,
-} from "./ui/select";
+} from "../ui/select";
 import { experienceOptions } from "@/lib/data/experienceOptions";
 import { jobTypeOptions } from "@/lib/data/jobTypeOptions";
-import { Button } from "./ui/button";
+import { Button } from "../ui/button";
 import { useRouter } from "next/navigation";
 import { setSearchQueries } from "@/lib/utils";
-import { SearchParams } from "@/lib/types";
 
 const SearchForm = ({ searchParams }: { searchParams: SearchParams }) => {
-  const router = useRouter();
-
   const form = useForm<SearchSchemaType>({
     resolver: zodResolver(searchSchema),
     defaultValues: {
-      city: searchParams.city,
+      city: searchParams.city ?? "",
       salary: searchParams.salary ? parseInt(searchParams.salary) : 0,
       experienceLevel: searchParams.experienceLevel,
       jobType: searchParams.jobType,
     },
   });
 
+  const router = useRouter();
   const onSubmit = (values: SearchSchemaType) => {
     router.push(setSearchQueries(values));
   };
