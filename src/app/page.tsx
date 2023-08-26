@@ -5,6 +5,7 @@ import { Suspense } from "react";
 
 export const dynamic = "force-dynamic";
 
+// Test git
 const Page = async ({ searchParams }: { searchParams: SearchParams }) => {
   return (
     <>
