@@ -42,7 +42,7 @@ const SearchForm = ({ searchParams }: { searchParams: SearchParams }) => {
     <Form {...form}>
       <form
         onSubmit={form.handleSubmit(onSubmit)}
-        className="grid mb-10 gap-x-6 gap-y-3 md:grid-cols-2 xl:grid-cols-3"
+        className="grid pb-6 mb-10 border-b gap-x-6 gap-y-3 md:grid-cols-2 xl:grid-cols-3"
       >
         <FormField
           control={form.control}
@@ -62,7 +62,7 @@ const SearchForm = ({ searchParams }: { searchParams: SearchParams }) => {
           name="jobType"
           render={({ field }) => (
             <FormItem>
-              <FormLabel>Job Type</FormLabel>
+              <FormLabel>Job type</FormLabel>
               <Select onValueChange={field.onChange} defaultValue={field.value}>
                 <FormControl>
                   <SelectTrigger>
@@ -88,7 +88,7 @@ const SearchForm = ({ searchParams }: { searchParams: SearchParams }) => {
           name="experienceLevel"
           render={({ field }) => (
             <FormItem>
-              <FormLabel>Experience Level</FormLabel>
+              <FormLabel>Experience level</FormLabel>
               <Select onValueChange={field.onChange} defaultValue={field.value}>
                 <FormControl>
                   <SelectTrigger>
@@ -114,7 +114,7 @@ const SearchForm = ({ searchParams }: { searchParams: SearchParams }) => {
           name="salary"
           render={({ field }) => (
             <FormItem className="@sm:col-span-2">
-              <FormLabel>Minimum Salary</FormLabel>
+              <FormLabel>Minimum monthly salary</FormLabel>
               <FormControl>
                 <Input placeholder="Salary" type="number" {...field} min={0} />
               </FormControl>

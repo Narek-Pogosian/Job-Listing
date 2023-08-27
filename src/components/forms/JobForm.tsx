@@ -119,7 +119,7 @@ const JobForm = ({ initialData, children, onSubmit }: Props) => {
             name="salary"
             render={({ field }) => (
               <FormItem>
-                <FormLabel>Salary</FormLabel>
+                <FormLabel>Monthly salary</FormLabel>
                 <FormControl>
                   <Input
                     placeholder="Salary"
@@ -137,7 +137,7 @@ const JobForm = ({ initialData, children, onSubmit }: Props) => {
             name="jobType"
             render={({ field }) => (
               <FormItem>
-                <FormLabel>Job Type</FormLabel>
+                <FormLabel>Job type</FormLabel>
                 <Select
                   onValueChange={field.onChange}
                   defaultValue={field.value}
@@ -164,7 +164,7 @@ const JobForm = ({ initialData, children, onSubmit }: Props) => {
             name="experienceLevel"
             render={({ field }) => (
               <FormItem>
-                <FormLabel>Experience Level</FormLabel>
+                <FormLabel>Experience level</FormLabel>
                 <Select
                   onValueChange={field.onChange}
                   defaultValue={field.value}
