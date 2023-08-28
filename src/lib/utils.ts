@@ -38,6 +38,8 @@ export function setSearchQueries(values: SearchSchemaType) {
     searchParams.delete("salary");
   }
 
+  searchParams.delete("page");
+
   return `${window.location.pathname}?${searchParams.toString()}`;
 }
 
