@@ -4,7 +4,10 @@ import * as z from "zod";
 export const jobSchema = z.object({
   title: z.string().min(1, { message: "Title is required." }).max(50),
   details: z.string().optional(),
-  city: z.string().min(1, { message: "City is required." }),
+  city: z
+    .string()
+    .min(1, { message: "City is required." })
+    .transform((arg) => arg?.toLocaleLowerCase()),
   company: z.string().min(1, { message: "Company is required." }),
   salary: z.coerce.number().min(0),
   jobType: z.nativeEnum(JobType),

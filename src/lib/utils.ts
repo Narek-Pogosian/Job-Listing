@@ -15,7 +15,7 @@ export function setSearchQueries(values: SearchSchemaType) {
   const searchParams = new URLSearchParams(window.location.search);
 
   if (values.city) {
-    searchParams.set("city", values.city);
+    searchParams.set("city", values.city.toLocaleLowerCase());
   } else {
     searchParams.delete("city");
   }
@@ -40,3 +40,31 @@ export function setSearchQueries(values: SearchSchemaType) {
 
   return `${window.location.pathname}?${searchParams.toString()}`;
 }
+
+export const nextPage = () => {
+  const searchParams = new URLSearchParams(window.location.search);
+  const currentPage = searchParams.get("page");
+
+  if (!currentPage || currentPage === "1") {
+    searchParams.set("page", "2");
+  } else {
+    searchParams.set("page", String(Number(currentPage) + 1));
+  }
+
+  return `${window.location.pathname}?${searchParams.toString()}`;
+};
+
+export const previousPage = () => {
+  const searchParams = new URLSearchParams(window.location.search);
+  const currentPage = searchParams.get("page");
+
+  if (!currentPage || currentPage === "1") {
+    searchParams.set("page", "1");
+  } else if (currentPage === "2") {
+    searchParams.delete("page");
+  } else {
+    searchParams.set("page", String(Number(currentPage) - 1));
+  }
+
+  return `${window.location.pathname}?${searchParams.toString()}`;
+};

@@ -42,7 +42,7 @@ const SearchForm = ({ searchParams }: { searchParams: SearchParams }) => {
     <Form {...form}>
       <form
         onSubmit={form.handleSubmit(onSubmit)}
-        className="grid pb-6 mb-10 border-b gap-x-6 gap-y-3 md:grid-cols-2 xl:grid-cols-3"
+        className="grid pb-6 mb-6 border-b gap-x-6 gap-y-3 md:grid-cols-2 xl:grid-cols-3"
       >
         <FormField
           control={form.control}

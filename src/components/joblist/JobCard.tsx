@@ -1,11 +1,5 @@
 import { JobListing } from "@prisma/client";
-import {
-  Card,
-  CardContent,
-  CardDescription,
-  CardHeader,
-  CardTitle,
-} from "@/components/ui/card";
+import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { convertEnumString } from "@/lib/utils";
 import { Button } from "../ui/button";
 import { Badge } from "../ui/badge";
@@ -20,18 +14,18 @@ const JobCard = ({ job }: Props) => {
     <Card key={job.id}>
       <CardHeader>
         <CardTitle className="md:text-lg">{job.title}</CardTitle>
-        <CardDescription>
-          <span className="mr-2 font-semibold">{job.company}</span>
-          <span>{job.city}</span>
-        </CardDescription>
+        <div className="flex">
+          <p className="mr-2 font-semibold">{job.company}</p>
+          <p className="capitalize">{job.city}</p>
+        </div>
       </CardHeader>
       <CardContent>
         <div className="flex flex-wrap gap-2 mb-8">
           <Badge variant="outline">
-            <CircleDollarSign className="w-4 h-4 mr-1" /> {job.salary}
+            <CircleDollarSign className="w-3 h-3 mr-1" /> {job.salary}
           </Badge>
           <Badge variant="outline">
-            <CalendarDays className="w-4 h-4 mr-1" />
+            <CalendarDays className="w-3 h-3 mr-1" />
             {convertEnumString(job.jobType)}
           </Badge>
           <Badge variant="outline">

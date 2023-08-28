@@ -1,4 +1,4 @@
-import { Card, CardContent, CardDescription, CardHeader } from "../ui/card";
+import { Card, CardContent, CardHeader } from "../ui/card";
 import { Skeleton } from "../ui/skeleton";
 
 const SkeletonCard = () => {
@@ -6,10 +6,10 @@ const SkeletonCard = () => {
     <Card>
       <CardHeader>
         <Skeleton className="h-5" />
-        <CardDescription>
+        <div className="flex">
           <Skeleton className="h-4 mr-2 w-44" />
           <Skeleton className="h-4 w-44" />
-        </CardDescription>
+        </div>
       </CardHeader>
       <CardContent>
         <div className="flex flex-wrap gap-2 mb-8">
