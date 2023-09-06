@@ -4,6 +4,8 @@ import { SearchParams } from "@/lib/validations/searchValiditions";
 import { Suspense } from "react";
 import SkeletonList from "@/components/joblist/SkeletonList";
 
+export const dynamic = true;
+
 const Page = async ({ searchParams }: { searchParams: SearchParams }) => {
   return (
     <>

@@ -19,8 +19,8 @@ const JobCard = ({ job }: Props) => {
           <p className="capitalize">{job.city}</p>
         </div>
       </CardHeader>
-      <CardContent>
-        <div className="flex flex-wrap gap-2 mb-8">
+      <CardContent className="pt-8">
+        <div className="flex flex-wrap gap-2">
           <Badge variant="outline">
             <CircleDollarSign className="w-3 h-3 mr-1" /> {job.salary}
           </Badge>
@@ -33,7 +33,6 @@ const JobCard = ({ job }: Props) => {
             {convertEnumString(job.experienceLevel)}
           </Badge>
         </div>
-        <Button size="sm">Read more</Button>
       </CardContent>
     </Card>
   );
