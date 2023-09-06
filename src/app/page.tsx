@@ -4,7 +4,7 @@ import { SearchParams } from "@/lib/validations/searchValiditions";
 import { Suspense } from "react";
 import SkeletonList from "@/components/joblist/SkeletonList";
 
-export const dynamic = true;
+export const dynamic = "force-dynamic";
 
 const Page = async ({ searchParams }: { searchParams: SearchParams }) => {
   return (
