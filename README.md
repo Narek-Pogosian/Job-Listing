@@ -8,5 +8,4 @@ You can then view the job listings in with pagination and apply filter with sear
 Next.js, Prisma, MongoDB, Shadcn
 
 ## View website
-
-<a href="https://job-listing-rho.vercel.app/" target="_blank">View here</a>
+Not hosted
