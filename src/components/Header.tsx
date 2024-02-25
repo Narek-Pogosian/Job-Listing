@@ -17,7 +17,7 @@ const Header = () => {
         </Link>
         <div className="flex gap-2">
           <Button asChild>
-            <Link href="/new">Create Listing</Link>
+            <Link href="/listing/create">Create Listing</Link>
           </Button>
           <ToggleTheme />
         </div>

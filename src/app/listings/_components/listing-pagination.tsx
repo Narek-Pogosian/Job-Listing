@@ -1,7 +1,7 @@
 "use client";
 
 import { setNextPage, setPreviousPage } from "@/lib/helpers/search-params";
-import { Button } from "../ui/button";
+import { Button } from "@/components/ui/button";
 import { useRouter } from "next/navigation";
 
 type Props = {
@@ -10,7 +10,7 @@ type Props = {
   currentPage: number | string;
 };
 
-const Pagination = ({ hasNext, hasPrevious, currentPage }: Props) => {
+const ListingPagination = ({ hasNext, hasPrevious, currentPage }: Props) => {
   const router = useRouter();
 
   return (
@@ -36,4 +36,4 @@ const Pagination = ({ hasNext, hasPrevious, currentPage }: Props) => {
   );
 };
 
-export default Pagination;
+export default ListingPagination;

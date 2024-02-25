@@ -1,8 +1,7 @@
-import { db } from "@/lib/db";
-import JobCard from "./JobCard";
+import ListingPagination from "./listing-pagination";
+import JobCard from "./job-card";
 import { JobSearchParams } from "@/lib/validations/search-validition";
-import Pagination from "./Pagination";
-import { getJobs } from "@/actions";
+import { getJobs } from "../_actions";
 
 const JobList = async ({ searchParams }: { searchParams: JobSearchParams }) => {
   const jobs = await getJobs(searchParams);
@@ -19,7 +18,7 @@ const JobList = async ({ searchParams }: { searchParams: JobSearchParams }) => {
         </div>
       )}
 
-      <Pagination
+      <ListingPagination
         hasNext={jobs.length === 6}
         hasPrevious={Number(searchParams.page) > 1}
         currentPage={searchParams.page ? searchParams.page : 1}

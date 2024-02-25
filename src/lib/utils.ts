@@ -6,6 +6,6 @@ export function cn(...inputs: ClassValue[]) {
   return twMerge(clsx(inputs));
 }
 
-export function convertEnumString(str: JobType | ExperienceLevel) {
+export function convertEnumToString(str: JobType | ExperienceLevel) {
   return str.replace("_", " ");
 }

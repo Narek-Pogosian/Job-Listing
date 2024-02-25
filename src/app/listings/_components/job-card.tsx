@@ -1,9 +1,8 @@
 import { JobListing } from "@prisma/client";
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
-import { convertEnumString } from "@/lib/utils";
-import { Button } from "../ui/button";
-import { Badge } from "../ui/badge";
+import { convertEnumToString } from "@/lib/utils";
 import { CalendarDays, CircleDollarSign, GraduationCap } from "lucide-react";
+import { Badge } from "@/components/ui/badge";
 
 type Props = {
   job: JobListing;
@@ -26,11 +25,11 @@ const JobCard = ({ job }: Props) => {
           </Badge>
           <Badge variant="outline">
             <CalendarDays className="w-3 h-3 mr-1" />
-            {convertEnumString(job.jobType)}
+            {convertEnumToString(job.jobType)}
           </Badge>
           <Badge variant="outline">
             <GraduationCap className="w-4 h-4 mr-1" />
-            {convertEnumString(job.experienceLevel)}
+            {convertEnumToString(job.experienceLevel)}
           </Badge>
         </div>
       </CardContent>

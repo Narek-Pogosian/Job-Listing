@@ -4,8 +4,8 @@ import { JobSchemaType, jobSchema } from "@/lib/validations/job-validation";
 import { useForm } from "react-hook-form";
 import { zodResolver } from "@hookform/resolvers/zod";
 import { JobListing } from "@prisma/client";
-import { Input } from "../ui/input";
-import { Textarea } from "../ui/textarea";
+import { Input } from "../../../components/ui/input";
+import { Textarea } from "../../../components/ui/textarea";
 import { jobTypeOptions } from "@/lib/constants/job-type-options";
 import { experienceOptions } from "@/lib/constants/experience-options";
 import {
@@ -15,14 +15,14 @@ import {
   FormItem,
   FormLabel,
   FormMessage,
-} from "../ui/form";
+} from "../../../components/ui/form";
 import {
   Select,
   SelectContent,
   SelectItem,
   SelectTrigger,
   SelectValue,
-} from "../ui/select";
+} from "../../../components/ui/select";
 import type { ReactNode } from "react";
 
 type Props = {
@@ -31,7 +31,7 @@ type Props = {
   children: ReactNode; // Action buttons
 };
 
-const JobForm = ({ initialData, children, onSubmit }: Props) => {
+const ListingForm = ({ initialData, children, onSubmit }: Props) => {
   const form = useForm<JobSchemaType>({
     resolver: zodResolver(jobSchema),
     defaultValues: initialData
@@ -195,4 +195,4 @@ const JobForm = ({ initialData, children, onSubmit }: Props) => {
   );
 };
 
-export default JobForm;
+export default ListingForm;

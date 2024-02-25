@@ -1,11 +1,11 @@
 "use client";
 
 import { JobSchemaType } from "@/lib/validations/job-validation";
-import { createJob } from "@/actions";
 import { useRouter } from "next/navigation";
-import Link from "next/link";
-import JobForm from "@/components/forms/JobForm";
 import { Button } from "@/components/ui/button";
+import Link from "next/link";
+import ListingForm from "@/app/listing/_components/listing-form";
+import { createJob } from "../_actions";
 
 const Page = () => {
   const router = useRouter();
@@ -26,12 +26,12 @@ const Page = () => {
       <h1 className="mb-6 text-xl font-semibold md:text-2xl">
         Create new job listing
       </h1>
-      <JobForm onSubmit={onSubmit}>
+      <ListingForm onSubmit={onSubmit}>
         <Button variant="outline" asChild>
           <Link href="/">Cancel</Link>
         </Button>
         <Button>Submit</Button>
-      </JobForm>
+      </ListingForm>
     </div>
   );
 };

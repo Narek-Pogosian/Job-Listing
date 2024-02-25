@@ -7,22 +7,28 @@ import {
 } from "@/lib/validations/search-validition";
 import { zodResolver } from "@hookform/resolvers/zod";
 import { useForm } from "react-hook-form";
-import { Form, FormControl, FormField, FormItem, FormLabel } from "../ui/form";
-import { Input } from "../ui/input";
+import {
+  Form,
+  FormControl,
+  FormField,
+  FormItem,
+  FormLabel,
+} from "@/components/ui/form";
+import { Input } from "@/components/ui/input";
 import {
   Select,
   SelectContent,
   SelectItem,
   SelectTrigger,
   SelectValue,
-} from "../ui/select";
+} from "@/components/ui/select";
 import { experienceOptions } from "@/lib/constants/experience-options";
 import { jobTypeOptions } from "@/lib/constants/job-type-options";
-import { Button } from "../ui/button";
+import { Button } from "@/components/ui/button";
 import { useRouter } from "next/navigation";
 import { setSearchQueries } from "@/lib/helpers/search-params";
 
-const SearchForm = ({ searchParams }: { searchParams: JobSearchParams }) => {
+const JobSearchForm = ({ searchParams }: { searchParams: JobSearchParams }) => {
   const form = useForm<SearchSchemaType>({
     resolver: zodResolver(searchSchema),
     defaultValues: {
@@ -129,4 +135,4 @@ const SearchForm = ({ searchParams }: { searchParams: JobSearchParams }) => {
   );
 };
 
-export default SearchForm;
+export default JobSearchForm;
