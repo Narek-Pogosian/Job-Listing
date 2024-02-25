@@ -19,22 +19,13 @@ const Page = async ({ searchParams }: { searchParams: any }) => {
       <SearchForm
         searchParams={searchParams}
         key={Object.values(searchParams).join() + "form"}
-        // Using searchparams as key to remount on params change to update default values
       />
       <Suspense
         fallback={<SkeletonList />}
         key={Object.values(searchParams).join()}
-        // Need key to show fallback when params change and new request is made
       >
         <JobList searchParams={searchParams} />
       </Suspense>
-      <div className="flex gap-4 justify-center py-20">
-        <Button>Button</Button>
-        <Button variant="destructive">Button</Button>
-        <Button variant="ghost">Button</Button>
-        <Button variant="link">Button</Button>
-        <Button variant="outline">Button</Button>
-      </div>
     </div>
   );
 };

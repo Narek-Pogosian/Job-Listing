@@ -31,23 +31,23 @@
   }
 
   .dark {
-    --background: 240 5% 10%;
+    --background: 240 5% 8%;
     --foreground: 0 0% 95%;
 
-    --element: 240 8% 13%;
+    --element: 240 8% 12%;
     --element-foreground: 0 0% 95%;
 
-    --muted: 0 0% 15%;
+    --muted: 240 8% 10%;
     --muted-foreground: 240 5% 64.9%;
 
-    --accent: 240 8% 15%;
+    --accent: 240 8% 14%;
     --accent-foreground: 0 0% 98%;
 
     --destructive: 0 52.8% 35.6%;
     --destructive-foreground: 0 85.7% 97.3%;
 
-    --border: 240 8% 15%;
-    --input: 240 8% 15%;
+    --border: 240 8% 14%;
+    --input: 240 8% 14%;
   }
 }
 
