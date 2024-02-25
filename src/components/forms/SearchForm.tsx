@@ -16,8 +16,8 @@ import {
   SelectTrigger,
   SelectValue,
 } from "../ui/select";
-import { experienceOptions } from "@/lib/data/experienceOptions";
-import { jobTypeOptions } from "@/lib/data/jobTypeOptions";
+import { experienceOptions } from "@/lib/constants/experience-options";
+import { jobTypeOptions } from "@/lib/constants/job-type-options";
 import { Button } from "../ui/button";
 import { useRouter } from "next/navigation";
 import { setSearchQueries } from "@/lib/utils";

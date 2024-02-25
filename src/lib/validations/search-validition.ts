@@ -15,8 +15,7 @@ export const searchSchema = z.object({
 
 export type SearchSchemaType = z.infer<typeof searchSchema>;
 
-// City will be stored as lowercase in db
-export interface SearchParams {
+export interface JobSearchParams {
   city?: string;
   salary?: string;
   jobType?: JobType;

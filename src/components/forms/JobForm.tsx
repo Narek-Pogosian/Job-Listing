@@ -6,8 +6,8 @@ import { zodResolver } from "@hookform/resolvers/zod";
 import { JobListing } from "@prisma/client";
 import { Input } from "../ui/input";
 import { Textarea } from "../ui/textarea";
-import { jobTypeOptions } from "@/lib/data/jobTypeOptions";
-import { experienceOptions } from "@/lib/data/experienceOptions";
+import { jobTypeOptions } from "@/lib/constants/job-type-options";
+import { experienceOptions } from "@/lib/constants/experience-options";
 import {
   Form,
   FormControl,

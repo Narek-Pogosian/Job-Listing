@@ -1,19 +1,11 @@
 import { db } from "@/lib/db";
 import JobCard from "./JobCard";
-import { SearchParams } from "@/lib/validations/search-validition";
+import { JobSearchParams } from "@/lib/validations/search-validition";
 import Pagination from "./Pagination";
+import { getJobs } from "@/actions";
 
-const JobList = async ({ searchParams }: { searchParams: SearchParams }) => {
-  const jobs = await db.jobListing.findMany({
-    where: {
-      city: searchParams.city,
-      jobType: searchParams.jobType,
-      experienceLevel: searchParams.experienceLevel,
-      salary: { gte: searchParams.salary ? parseInt(searchParams.salary) : 0 },
-    },
-    take: 6,
-    skip: searchParams.page ? (Number(searchParams.page) - 1) * 6 : 0,
-  });
+const JobList = async ({ searchParams }: { searchParams: JobSearchParams }) => {
+  const jobs = await getJobs(searchParams);
 
   return (
     <>
