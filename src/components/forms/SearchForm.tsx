@@ -1,7 +1,7 @@
 "use client";
 
 import {
-  SearchParams,
+  JobSearchParams,
   SearchSchemaType,
   searchSchema,
 } from "@/lib/validations/search-validition";
@@ -20,9 +20,9 @@ import { experienceOptions } from "@/lib/constants/experience-options";
 import { jobTypeOptions } from "@/lib/constants/job-type-options";
 import { Button } from "../ui/button";
 import { useRouter } from "next/navigation";
-import { setSearchQueries } from "@/lib/utils";
+import { setSearchQueries } from "@/lib/helpers/search-params";
 
-const SearchForm = ({ searchParams }: { searchParams: SearchParams }) => {
+const SearchForm = ({ searchParams }: { searchParams: JobSearchParams }) => {
   const form = useForm<SearchSchemaType>({
     resolver: zodResolver(searchSchema),
     defaultValues: {
@@ -42,7 +42,7 @@ const SearchForm = ({ searchParams }: { searchParams: SearchParams }) => {
     <Form {...form}>
       <form
         onSubmit={form.handleSubmit(onSubmit)}
-        className="grid pb-6 mb-6 border-b gap-x-6 gap-y-3 md:grid-cols-2 xl:grid-cols-3"
+        className="grid pb-8 pt-2 mb-6 border-b gap-x-6 gap-y-3 md:grid-cols-2 xl:grid-cols-3"
       >
         <FormField
           control={form.control}

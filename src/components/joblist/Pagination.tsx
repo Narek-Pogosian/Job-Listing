@@ -1,6 +1,6 @@
 "use client";
 
-import { nextPage, previousPage } from "@/lib/utils";
+import { setNextPage, setPreviousPage } from "@/lib/helpers/search-params";
 import { Button } from "../ui/button";
 import { useRouter } from "next/navigation";
 
@@ -18,7 +18,7 @@ const Pagination = ({ hasNext, hasPrevious, currentPage }: Props) => {
       <Button
         variant="outline"
         disabled={!hasPrevious}
-        onClick={() => router.push(previousPage())}
+        onClick={() => router.push(setPreviousPage())}
       >
         Previous
       </Button>
@@ -28,7 +28,7 @@ const Pagination = ({ hasNext, hasPrevious, currentPage }: Props) => {
       <Button
         variant="outline"
         disabled={!hasNext}
-        onClick={() => router.push(nextPage())}
+        onClick={() => router.push(setNextPage())}
       >
         Next
       </Button>

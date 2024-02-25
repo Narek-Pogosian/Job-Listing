@@ -1,13 +1,13 @@
 import JobList from "@/components/joblist/JobList";
 import SearchForm from "@/components/forms/SearchForm";
-import { Suspense } from "react";
 import SkeletonList from "@/components/joblist/SkeletonList";
-import { Button } from "@/components/ui/button";
+import { Suspense } from "react";
 import { searchSchema } from "@/lib/validations/search-validition";
+import { type SearchParams } from "@/lib/helpers/search-params";
 
 export const dynamic = "force-dynamic";
 
-const Page = async ({ searchParams }: { searchParams: any }) => {
+const Page = async ({ searchParams }: { searchParams: SearchParams }) => {
   const { success } = searchSchema.safeParse(searchParams);
 
   if (!success) {
