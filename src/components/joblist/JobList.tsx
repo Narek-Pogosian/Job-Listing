@@ -1,6 +1,6 @@
 import { db } from "@/lib/db";
 import JobCard from "./JobCard";
-import { SearchParams } from "@/lib/validations/searchValiditions";
+import { SearchParams } from "@/lib/validations/search-validition";
 import Pagination from "./Pagination";
 
 const JobList = async ({ searchParams }: { searchParams: SearchParams }) => {

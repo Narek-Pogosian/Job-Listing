@@ -55,3 +55,8 @@
     @apply overflow-y-scroll bg-background text-foreground;
   }
 }
+
+html,
+body {
+  height: 100%;
+}

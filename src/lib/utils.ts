@@ -1,7 +1,7 @@
 import { ExperienceLevel, JobType } from "@prisma/client";
 import { type ClassValue, clsx } from "clsx";
 import { twMerge } from "tailwind-merge";
-import { SearchSchemaType } from "./validations/searchValiditions";
+import { SearchSchemaType } from "./validations/search-validition";
 
 export function cn(...inputs: ClassValue[]) {
   return twMerge(clsx(inputs));

@@ -1,6 +1,6 @@
 "use client";
 
-import { JobSchemaType, jobSchema } from "@/lib/validations/jobValidation";
+import { JobSchemaType, jobSchema } from "@/lib/validations/job-validation";
 import { useForm } from "react-hook-form";
 import { zodResolver } from "@hookform/resolvers/zod";
 import { JobListing } from "@prisma/client";

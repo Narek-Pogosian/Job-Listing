@@ -4,7 +4,7 @@ import {
   SearchParams,
   SearchSchemaType,
   searchSchema,
-} from "@/lib/validations/searchValiditions";
+} from "@/lib/validations/search-validition";
 import { zodResolver } from "@hookform/resolvers/zod";
 import { useForm } from "react-hook-form";
 import { Form, FormControl, FormField, FormItem, FormLabel } from "../ui/form";

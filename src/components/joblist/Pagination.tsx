@@ -14,7 +14,7 @@ const Pagination = ({ hasNext, hasPrevious, currentPage }: Props) => {
   const router = useRouter();
 
   return (
-    <div className="flex justify-center gap-4 mt-6">
+    <div className="flex justify-center gap-4 mt-auto pt-6">
       <Button
         variant="outline"
         disabled={!hasPrevious}

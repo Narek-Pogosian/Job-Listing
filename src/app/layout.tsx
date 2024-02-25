@@ -18,10 +18,10 @@ export default function RootLayout({
 }) {
   return (
     <html lang="en" suppressHydrationWarning>
-      <body className={inter.className}>
+      <body className={`${inter.className} flex flex-col`}>
         <Providers>
           <Header />
-          <main className="container pt-3 pb-8">{children}</main>
+          <main className="container pt-3 pb-8 flex-1">{children}</main>
         </Providers>
       </body>
     </html>

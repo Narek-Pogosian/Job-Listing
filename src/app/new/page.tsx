@@ -1,6 +1,6 @@
 "use client";
 
-import { JobSchemaType } from "@/lib/validations/jobValidation";
+import { JobSchemaType } from "@/lib/validations/job-validation";
 import { createJob } from "@/actions";
 import { useRouter } from "next/navigation";
 import Link from "next/link";

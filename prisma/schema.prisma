@@ -3,12 +3,13 @@ generator client {
 }
 
 datasource db {
-  provider = "mongodb"
-  url      = env("DATABASE_URL")
+  provider  = "postgresql"
+  url       = env("DATABASE_URL")
+  directUrl = env("DIRECT_URL")
 }
 
 model JobListing {
-  id              String          @id @default(auto()) @map("_id") @db.ObjectId
+  id              String          @id @default(cuid())
   title           String
   city            String
   company         String

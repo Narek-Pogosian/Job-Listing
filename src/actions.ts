@@ -1,7 +1,7 @@
 "use server";
 
 import { db } from "./lib/db";
-import { JobSchemaType, jobSchema } from "./lib/validations/jobValidation";
+import { JobSchemaType, jobSchema } from "./lib/validations/job-validation";
 import { revalidatePath } from "next/cache";
 
 export const createJob = async (

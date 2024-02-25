@@ -1,6 +1,6 @@
 import JobList from "@/components/joblist/JobList";
 import SearchForm from "@/components/forms/SearchForm";
-import { SearchParams } from "@/lib/validations/searchValiditions";
+import { SearchParams } from "@/lib/validations/search-validition";
 import { Suspense } from "react";
 import SkeletonList from "@/components/joblist/SkeletonList";
 
@@ -8,7 +8,7 @@ export const dynamic = "force-dynamic";
 
 const Page = async ({ searchParams }: { searchParams: SearchParams }) => {
   return (
-    <>
+    <div className="h-full flex flex-col">
       <SearchForm
         searchParams={searchParams}
         key={Object.values(searchParams).join() + "form"}
@@ -21,7 +21,7 @@ const Page = async ({ searchParams }: { searchParams: SearchParams }) => {
       >
         <JobList searchParams={searchParams} />
       </Suspense>
-    </>
+    </div>
   );
 };
 
