@@ -3,11 +3,11 @@
 import { JobSchemaType } from "@/lib/validations/job-validation";
 import { useRouter } from "next/navigation";
 import { Button } from "@/components/ui/button";
+import { createJob } from "../_actions";
 import Link from "next/link";
 import ListingForm from "@/app/listing/_components/listing-form";
-import { createJob } from "../_actions";
 
-const Page = () => {
+const CreatePage = () => {
   const router = useRouter();
 
   const onSubmit = async (data: JobSchemaType) => {
@@ -36,4 +36,4 @@ const Page = () => {
   );
 };
 
-export default Page;
+export default CreatePage;
