@@ -1,4 +1,4 @@
-"use server";
+import "server-only";
 
 import { db } from "@/lib/db";
 import { JobSearchParams } from "@/lib/validations/search-validition";

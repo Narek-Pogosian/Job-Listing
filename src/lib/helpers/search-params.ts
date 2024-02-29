@@ -11,6 +11,7 @@ export function objectToParamsString(params: SearchParams) {
  */
 export function setSearchQueries(values: Record<string, any>) {
   const searchParams = new URLSearchParams(window.location.search);
+  searchParams.delete("page");
 
   Object.entries(values).forEach(([key, value]) => {
     if (value) {

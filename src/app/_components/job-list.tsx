@@ -1,7 +1,7 @@
 import ListingPagination from "./listing-pagination";
 import JobCard from "./job-card";
 import { JobSearchParams } from "@/lib/validations/search-validition";
-import { getJobs } from "../_actions";
+import { getJobs } from "@/data-access/listing/get-listings";
 
 const JobList = async ({ searchParams }: { searchParams: JobSearchParams }) => {
   const jobs = await getJobs(searchParams);
