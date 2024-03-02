@@ -6,7 +6,7 @@ import Link from "next/link";
 const Header = () => {
   return (
     <div className="border-b">
-      <header className="container flex items-center justify-between py-3">
+      <header className="container flex items-center justify-between py-4">
         <Link href="/" className="text-xl font-semibold md:text-2xl">
           <Image
             src="/job-listing-logo.svg"
