@@ -4,8 +4,7 @@ import JobSkeletonList from "@/app/_components/job-skeleton-list";
 import { Suspense } from "react";
 import { searchSchema } from "@/lib/validations/search-validition";
 import { type SearchParams } from "@/lib/helpers/search-params";
-
-export const dynamic = "force-dynamic";
+import { redirect } from "next/navigation";
 
 const ListingsPage = async ({
   searchParams,
@@ -15,7 +14,7 @@ const ListingsPage = async ({
   const { success } = searchSchema.safeParse(searchParams);
 
   if (!success) {
-    throw new Error("Invalid search params");
+    throw redirect("/");
   }
 
   return (

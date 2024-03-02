@@ -16,7 +16,7 @@ const ListingPagination = ({ hasNext, hasPrevious, currentPage }: Props) => {
   return (
     <div className="flex justify-center gap-4 mt-auto pt-6">
       <Button
-        variant="outline"
+        variant="ghost"
         disabled={!hasPrevious}
         onClick={() => router.push(setPreviousPage())}
       >
@@ -26,7 +26,7 @@ const ListingPagination = ({ hasNext, hasPrevious, currentPage }: Props) => {
         {currentPage}
       </span>
       <Button
-        variant="outline"
+        variant="ghost"
         disabled={!hasNext}
         onClick={() => router.push(setNextPage())}
       >

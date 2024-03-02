@@ -16,8 +16,8 @@ export default function Error({
   }, [error]);
 
   return (
-    <div className="pt-10 text-center">
-      <h2 className="mb-4 text-3xl">Something went wrong!</h2>
+    <div className="pt-20 text-center">
+      <h2 className="mb-4 text-4xl">Something went wrong!</h2>
       <Button
         onClick={
           // Attempt to recover by trying to re-render the segment
